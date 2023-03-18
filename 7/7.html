@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>7</title>
+</head>
+<body>
+<p>nhập mảng</p><input id="inputarray" type="text"><input
+        type="button" value="kiểm tra" onclick="checkN()"><br>
+<p>nhập 1 số trong để kiểm tra</p>
+<input id="inputV" type="text">
+<p id="result"></p>
+</body>
+<script>
+    function checkN() {
+        let inputarr = document.getElementById("inputarray").value
+        let array7 = inputarr.split(',')
+        let inputnum = document.getElementById("inputV").value
+        let count = 0
+        for (let i = 0; i < array7.length; i++) {
+            if (inputnum === array7[i]) {
+                array7.splice(i, 1)
+                array7.push(0)
+                count++
+                break;
+            }
+        }
+        if (count === 0) {
+            alert(`number is not in array`)
+        }
+        document.getElementById("result").innerHTML = array7
+    }
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>nhập mảng</p><input id="inputarray" type="text"><input
+        type="button" value="kiểm tra" onclick="checkV()"><br>
+<p>nhập 1 số trong để kiểm tra</p>
+<input id="inputV" type="text">
+<p id="result"></p>
+</body>
+<script>
+    function checkV(){
+        let a=document.getElementById("inputarray").value
+        let b=document.getElementById("inputV").value
+        let c=a.split(',')
+        if(c.indexOf(b)!==-1){
+            document.getElementById("result").innerHTML=`${b} in the array`
+        }else {
+            document.getElementById("result").innerHTML=`${b} is not in the array`
+        }
+
+    }
+
+</script>
+</html>
